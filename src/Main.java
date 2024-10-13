@@ -27,14 +27,14 @@ public class Main {
         }
     }
 
-    public static void finalDeliveryTime(int deliveryDistance, int deliveryDays) {
+    public static void calculateDeliveryTime(int deliveryDistance) {
         if (deliveryDistance <= 100) {
             if (deliveryDistance > 0 && deliveryDistance < 20) {
-                System.out.println("Потребуется дней: " + deliveryDays);
+                System.out.println("Потребуется дней: 1");
             } else if (deliveryDistance <= 60) {
-                System.out.println("Потребуется дней: " + (deliveryDays + 1));
+                System.out.println("Потребуется дней: 2");
             } else if (deliveryDistance <= 100) {
-                System.out.println("Потребуется дней: " + (deliveryDays + 2));
+                System.out.println("Потребуется дней: 3");
             }
         } else {
             System.out.println("Доставка невозможна");
@@ -52,7 +52,6 @@ public class Main {
 
         System.out.println("Задание №3");
         int deliveryDistance = 91;
-        int deliveryDays = 1;
-        finalDeliveryTime(deliveryDistance, deliveryDays);
+        calculateDeliveryTime(deliveryDistance);
     }
 }
